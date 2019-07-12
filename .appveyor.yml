@@ -23,8 +23,8 @@ install:
   - pyinstaller --name oj --onefile onlinejudge\_implementation\main.py
 
 test_script:
+  - del dist\oj.exe
   - python setup.py test
-  - dist\oj.exe --version
 
 artifacts:
   - path: dist\oj.exe
